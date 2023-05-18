@@ -1,9 +1,3 @@
-
-from demoqa_tests.pages.registration_page import RegistrationPage
-from datetime import date
-from demoqa_tests.data.users import User, Gender, Subject, Hobby
-from demoqa_tests.pages.registration_page import RegistrationPage
-
 from datetime import date
 from demoqa_tests.data.users import User, Gender, Subject, Hobby
 from demoqa_tests.pages.registration_page import RegistrationPage
@@ -16,11 +10,11 @@ def test_practice_form():
         first_name='Sergey',
         last_name='Petrov',
         email='Petrov@mail.ru',
-        genders=Gender.male.value,
+        gender=Gender.male.value,
         phone_number=8999777777,
         date_of_birth=date(1991, 10, 19),
-        subjects=[Subject.chemistry],
-        hobbies=[Hobby.sports],
+        subjects=[Subject.chemistry.value],
+        hobbies=[Hobby.sports.value],
         upload_filename='test.jpg',
         current_address='Moscow',
         state='NCR',
@@ -34,7 +28,7 @@ def test_practice_form():
     registration_page.fill_form_register(student)
 
     # THEN
-    registration_page.should_have_registered(student)
+    registration_page.should_registered_user_with(student)
 
 
 

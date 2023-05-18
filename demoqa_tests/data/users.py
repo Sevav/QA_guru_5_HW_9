@@ -2,14 +2,6 @@ from dataclasses import dataclass
 from datetime import date
 from enum import Enum
 from typing import List
-import dataclasses
-from datetime import datetime, date
-from enum import Enum
-from typing import List
-import dataclasses
-from datetime import date
-from enum import Enum
-from typing import List
 
 
 class Gender(Enum):
@@ -43,7 +35,7 @@ class User:
     first_name: str
     last_name: str
     email: str
-    genders: Gender
+    gender: List[Gender]
     phone_number: int
     date_of_birth: date
     subjects: List[Subject]
