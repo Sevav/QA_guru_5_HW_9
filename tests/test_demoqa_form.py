@@ -1,5 +1,3 @@
-# 111
-# 222
 
 from demoqa_tests.pages.registration_page import RegistrationPage
 from datetime import date
